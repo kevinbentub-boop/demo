@@ -7,16 +7,20 @@ $membres[] = "Bob";
 $CodeSecret = "tyrolium2026";
 
 function verifierAcces($prenom, $motdepasse)
-
 {
     if ($prenom == "Maxime" && $motdepasse == "tyrolium2026") {
-        echo "Accès Utilisateur autorisé pour Maxime.";
+        echo "Accès Utilisateur autorisé pour Maxime.\n";
     } else {
-        echo "Accès refusé pour $prenom.";  
+        echo "Accès refusé pour $prenom.\n";  
     }
 
     for ($i = 0; $i <= 2; $i++) {
-    echo "La valeur de i est : $i\n";
+        echo "La valeur de i est : $i\n";
+    }
+
+    echo "-----------------\n";
 }
 
+foreach ($membres as $membre) {
+    verifierAcces($membre, $CodeSecret);
 }
